@@ -245,11 +245,11 @@ body {
 }
 .contact-animate {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.contact-animate.active {
+.section-animate.active .contact-animate {
   opacity: 1;
   transform: translateY(0);
 }
@@ -319,9 +319,6 @@ body {
 .contact-links a:hover::after {
   transform: scaleX(1);
 }
-
-
-
 .section-animate {
   opacity: 0;
   transform: translateY(60px);
@@ -333,9 +330,6 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
-
-
 
 @media (max-width: 1024px) {
 
@@ -522,4 +516,5 @@ body {
     display: none;
   }
 }
+
 
