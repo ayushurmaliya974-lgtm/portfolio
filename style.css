@@ -230,6 +230,36 @@ color: #444;
 }
 
 
+.contact-form {
+  max-width: 100%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* ================= ANIMATION ================= */
 
 .section-animate {
@@ -363,3 +393,4 @@ color: #444;
     opacity: 0.035;
   }
 }
+
