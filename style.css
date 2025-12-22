@@ -27,7 +27,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 32px 40px;
-  animation: fadeDown 0.8s ease forwards;
 }
 
 .nav-logo {
@@ -83,8 +82,6 @@ body {
   color: rgba(0,0,0,0.08);
   pointer-events: none;
   opacity: 0;
-  animation: bgFade 1.4s ease forwards;
-  animation-delay: 0.4s;
 }
 
 .hero-content {
@@ -96,9 +93,7 @@ body {
   font-size: 48px;
   font-weight: 800;
   opacity: 0;
-  transform: translateY(20px);
-  animation: textUp 0.9s ease forwards;
-  animation-delay: 0.3s;
+  transform: translateY(20px)
 }
 
 .role {
@@ -106,9 +101,7 @@ body {
   font-size: 22px;
   color: var(--text-secondary);
   opacity: 0;
-  transform: translateY(20px);
-  animation: textUp 0.9s ease forwards;
-  animation-delay: 0.45s;
+  transform: translateY(20px)
 }
 
 .description {
@@ -118,8 +111,6 @@ body {
   color: var(--text-secondary);
   opacity: 0;
   transform: translateY(20px);
-  animation: textUp 0.9s ease forwards;
-  animation-delay: 0.6s;
 }
 
 /* ================= ABOUT ================= */
@@ -140,7 +131,6 @@ body {
 .about-block {
   opacity: 0;
   transform: translateY(24px);
-  animation: textUp 0.8s ease forwards;
 }
 
 .about-block:nth-child(1) { animation-delay: 0.2s; }
@@ -175,53 +165,7 @@ body {
   color: #333;
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeUp 0.6s ease forwards;
 }
-
-.skills span:nth-child(1) { animation-delay: 0.5s; }
-.skills span:nth-child(2) { animation-delay: 0.6s; }
-.skills span:nth-child(3) { animation-delay: 0.7s; }
-.skills span:nth-child(4) { animation-delay: 0.8s; }
-.skills span:nth-child(5) { animation-delay: 0.9s; }
-
-/* ================= ANIMATIONS ================= */
-
-@keyframes textUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes bgFade {
-  to {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= RESPONSIVE ================= */
-
-/* ---------------- PROJECTS ---------------- */
-
 #projects {
   background: var(--bg-main);
   padding: 140px 40px;
@@ -243,12 +187,8 @@ body {
   overflow: hidden;
   opacity: 0;
   transform: translateY(24px);
-  animation: cardUp 0.8s ease forwards;
 }
 
-.project-card:nth-child(1) { animation-delay: 0.2s; }
-.project-card:nth-child(2) { animation-delay: 0.35s; }
-.project-card:nth-child(3) { animation-delay: 0.5s; }
 
 .project-image {
   width: 100%;
@@ -290,14 +230,6 @@ body {
   color: var(--accent-soft);
 }
 
-/* Loading animation */
-@keyframes cardUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* ---------------- CONTACT ---------------- */
 
 #contact {
@@ -321,19 +253,6 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
-
-.contact-animate:nth-child(1) { animation-delay: 0.2s; }
-.contact-animate:nth-child(2) { animation-delay: 0.35s; }
-.contact-animate:nth-child(3) { animation-delay: 0.5s; }
-
-@keyframes contactUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .contact-title {
   font-size: 44px;
   font-weight: 800;
@@ -603,3 +522,4 @@ body {
     display: none;
   }
 }
+
