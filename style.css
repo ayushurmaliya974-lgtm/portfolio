@@ -281,7 +281,7 @@ color: #444;
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  opacity: 0.55;
+  opacity: 0.44;
 }
 
 /* ================= SUBMIT BUTTON ================= */
@@ -446,6 +446,7 @@ color: #444;
     opacity: 0.035;
   }
 }
+
 
 
 
