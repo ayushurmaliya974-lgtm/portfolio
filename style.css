@@ -174,91 +174,88 @@ body {
 
 .project-link:hover {
   color: var(--accent-soft);
+}/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+  padding: 80px 6vw;
+  display: flex;
+  justify-content: center;
 }
 
-/* ================= CONTACT ================= */
-
-#contact {
-  background: var(--bg-section);
-  padding: 80px 24px;
-}
-
-.contact-inner {
-  max-width: 640px;
-  margin: auto;
+.contact-container {
+  width: 100%;
+  max-width: 520px;
   text-align: center;
 }
 
-.contact-title {
-  font-size: 40px;
-  margin-bottom: 16px;
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.contact-text {
-  font-size: 18px;
-  margin-bottom: 32px;
+.contact-container p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.75;
 }
+
+/* Button */
 
 .contact-btn {
-  padding: 14px 32px;
-  border-radius: 999px;
-  border: 1.5px solid #2C2C2C;
-  text-decoration: none;
-  color: #2C2C2C;
-  font-weight: 600;
+  background: transparent;
+  border: 1px solid #111;
+  padding: 12px 26px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
-  background: #2C2C2C;
+  background: #111;
   color: #fff;
-  transform: translateY(-2px);
 }
 
-.contact-links {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  
-}
-
-.contact-links a {
-text-decoration: none;
-font-size: 15px;
-position: relative;
-color: #444;
-}
-
+/* ================= FORM ================= */
 
 .contact-form {
-  max-width: 100%;
-  margin-top: 32px;
-  display: flex;
+  margin-top: 2rem;
+  display: none;
   flex-direction: column;
   gap: 14px;
+}
+
+.contact-form.show {
+  display: flex;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px 14px;
-  border-radius: 8px;
-  border: none;
-  font-size: 14px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  background: transparent;
+  outline: none;
 }
 
 .contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
+  resize: none;
 }
 
 .contact-form button {
-  padding: 12px;
-  border-radius: 999px;
+  background: #111;
+  color: #fff;
   border: none;
-  font-weight: 600;
+  padding: 12px;
+  font-size: 0.9rem;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
+
+.contact-form button:hover {
+  opacity: 0.85;
+}
+
 
 /* ================= ANIMATION ================= */
 
@@ -393,5 +390,6 @@ color: #444;
     opacity: 0.035;
   }
 }
+
 
 
