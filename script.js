@@ -21,13 +21,35 @@ animatedSections.forEach((section) => {
   observer.observe(section);
 });
 
-const toggleBtn = document.getElementById('contactToggle');
-const form = document.getElementById('contactForm');
+//Contact Form Toggle
+    const contactToggle = document.getElementById('contactToggle');
+    const contactForm = document.getElementById('contactForm');
 
-if (toggleBtn && form) {
-  toggleBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    form.classList.toggle('show');
-  });
-}
+    contactToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactForm.classList.toggle('show');
+      
+      if (contactForm.classList.contains('show')) {
+        contactToggle.textContent = 'Hide Form';
+        setTimeout(() => {
+          contactForm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      } else {
+        contactToggle.textContent = 'Get In Touch';
+      }
+ });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href') !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
 
