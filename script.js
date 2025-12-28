@@ -20,36 +20,16 @@ const observer = new IntersectionObserver(
 animatedSections.forEach((section) => {
   observer.observe(section);
 });
+/* ================= COPY EMAIL ================= */
 
-//Contact Form Toggle
-    const contactToggle = document.getElementById('contactToggle');
-    const contactForm = document.getElementById('contactForm');
+const copyEmail = document.getElementById('copyEmail');
 
-    contactToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      contactForm.classList.toggle('show');
-      
-      if (contactForm.classList.contains('show')) {
-        contactToggle.textContent = 'Hide Form';
-        setTimeout(() => {
-          contactForm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
-      } else {
-        contactToggle.textContent = 'Get In Touch';
-      }
- });
-
-    // Smooth Scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        if (this.getAttribute('href') !== '#') {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }
-      });
-    });
-
-
+if (copyEmail) {
+  copyEmail.addEventListener('click', () => {
+    navigator.clipboard.writeText('ayushurmaliya@gmail.com');
+    copyEmail.innerText = 'Email copied ✔';
+    setTimeout(() => {
+      copyEmail.innerText = 'ayushurmaliya@gmail.com';
+    }, 2000);
+  });
+}
